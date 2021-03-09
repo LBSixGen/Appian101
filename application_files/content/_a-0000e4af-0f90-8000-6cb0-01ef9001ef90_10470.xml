@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_10763</versionUuid>
+    <rule>
+        <name>MW_AM_FurnitureDocs2</name>
+        <uuid>_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_10470</uuid>
+        <description></description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>{
+  #"SYSTEM_SYSRULES_ButtonArrayLayout"(
+    buttons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "NORMAL"
+      )
+    },
+    align: "START"
+  ),
+  #"SYSTEM_SYSRULES_fileUploadField_v1"(
+    label: "File Upload",
+    labelPosition: "ABOVE",
+    target: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_45622",
+    filenames: "",
+    value: ri!FurnitureDOCS.furnitureDocument,
+    saveInto: ri!FurnitureDOCS.furnitureDocument,
+    validations: {}
+  )
+}</definition>
+        <namedTypedValue>
+            <name>FurnitureDOCS</name>
+            <type>
+                <name>MW_AM_Furniture_Documents2</name>
+                <namespace>urn:com:appian:types:MW</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_10763"/>
+    </history>
+</contentHaul>

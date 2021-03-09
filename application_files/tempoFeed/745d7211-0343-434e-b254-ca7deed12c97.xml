@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>fa3d2153-7cc3-4758-99aa-e06217fd420f</versionUuid>
+    <tempoFeed>
+        <uuid>745d7211-0343-434e-b254-ca7deed12c97</uuid>
+        <name>MW AM News Feed</name>
+        <description>News feed for MW AM application </description>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000e47b-6a3e-8000-9af1-01075c01075c_226</groupUuid>
+                <groupUuid>_e-0000e47b-6a3e-8000-9af1-01075c01075c_228</groupUuid>
+                <groupUuid>_e-0000e47b-6a3e-8000-9af1-01075c01075c_222</groupUuid>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_172</groupUuid>
+                <groupUuid>_e-0000e47b-6a3e-8000-9af1-01075c01075c_220</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="3fe04ed4-252c-4873-8038-4598276fd73b"/>
+        <historyInfo versionUuid="c483d640-b694-4225-bfe5-08e3151142f4"/>
+        <historyInfo versionUuid="fa3d2153-7cc3-4758-99aa-e06217fd420f"/>
+    </history>
+</tempoFeedHaul>

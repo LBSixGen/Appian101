@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_312</versionUuid>
+    <group>
+        <name>PO All Users</name>
+        <securityMap>SECURITYMAP_TEAM</securityMap>
+        <uuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_311</uuid>
+        <groupTypeUuid>SYSTEM_GROUP_TYPE_CUSTOM</groupTypeUuid>
+        <description></description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_LOW</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_320</groupUuid>
+            <groupUuid>_e-0000e42c-179a-8000-9af0-01075c01075c_252</groupUuid>
+            <groupUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_322</groupUuid>
+            <groupUuid>_e-0000e46d-84aa-8000-9af6-01075c01075c_436</groupUuid>
+            <groupUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_318</groupUuid>
+        </groups>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000e42c-179a-8000-9af0-01075c01075c_252</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="_e-0000e440-1dfe-8000-9af2-01075c01075c_312"/>
+    </history>
+</groupHaul>

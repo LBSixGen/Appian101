@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_319</versionUuid>
+    <group>
+        <name>PO Human Resources</name>
+        <securityMap>SECURITYMAP_TEAM</securityMap>
+        <uuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_318</uuid>
+        <groupTypeUuid>SYSTEM_GROUP_TYPE_CUSTOM</groupTypeUuid>
+        <parentUuid>_e-0000e440-1dfe-8000-9af2-01075c01075c_311</parentUuid>
+        <description>Human Resources office responsible for on-boarding of new employees(CIV/MIL/CTR)</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_LOW</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups/>
+    </members>
+    <admins>
+        <users/>
+        <groups/>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="_e-0000e440-1dfe-8000-9af2-01075c01075c_319"/>
+    </history>
+</groupHaul>

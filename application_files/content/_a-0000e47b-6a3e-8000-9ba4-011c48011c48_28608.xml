@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e46d-84aa-8000-9baa-011c48011c48_125799</versionUuid>
+    <rule>
+        <name>MW_AM_AddTransferInfo</name>
+        <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_28608</uuid>
+        <description>Form to update the transfer info</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Furniture Transfer",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            /*a!imageField(*/
+              /*label: "Image",*/
+              /*labelPosition: "ABOVE",*/
+              /*images:  a!documentImage(*/
+                  /*document: rule!MW_AM_ImageNotFoundExpression(ri!transferCDT.furnitureCDT.image)*/
+                /*)*/
+            /*,*/
+              /*size: "MEDIUM",*/
+              /*isThumbnail: false,*/
+              /*style: "STANDARD"*/
+            /*)*/ {}
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Furniture ID",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.furnitureId,
+              saveInto: ri!transferCDT.furnitureCDT.furnitureId,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Color",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.color,
+              saveInto: ri!transferCDT.furnitureCDT.color,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Material",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.material,
+              saveInto: ri!transferCDT.furnitureCDT.material,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Type",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.type,
+              saveInto: ri!transferCDT.furnitureCDT.type,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Brand",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.brand,
+              saveInto: ri!transferCDT.furnitureCDT.brand,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Furniture Cost",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.cost,
+              saveInto: ri!transferCDT.furnitureCDT.cost,
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            )
+          
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_pickerFieldUsers"(
+              label: "Current Owner",
+              labelPosition: "ABOVE",
+              maxselections: 1,
+              value: {ri!transferCDT.furnitureCDT.currentOwner},
+              saveInto: ri!transferCDT.furnitureCDT.currentOwner,
+              required: true,
+              requiredmessage: "",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldUsers"(
+              label: "New Owner",
+              labelPosition: "ABOVE",
+              maxselections: 1,
+              value: {ri!transferCDT.furnitureCDT.newOwner},
+              saveInto: ri!transferCDT.furnitureCDT.newOwner,
+              required: true,
+              requiredmessage: "",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Added By",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.addedBy,
+              saveInto: ri!transferCDT.furnitureCDT.addedBy,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dateTimeField"(
+              label: "Added On",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.addedOn,
+              saveInto: ri!transferCDT.furnitureCDT.addedOn,
+              validations: {}
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_boxLayout"(
+      label: "Transfer Comments",
+      contents: {
+        #"SYSTEM_SYSRULES_paragraphField"(
+          label: "Paragraph",
+          labelPosition: "COLLAPSED",
+          value: ri!transferCDT.transferDescription,
+          saveInto: ri!transferCDT.transferDescription,
+          refreshAfter: "UNFOCUS",
+          height: "MEDIUM",
+          validations: {}
+        )
+      },
+      style: "ACCENT",
+      marginBelow: "STANDARD"
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>transferCDT</name>
+            <type>
+                <name>MW_AM_Transfer</name>
+                <namespace>urn:com:appian:types:AM</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>readOnly</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_36977"/>
+        <historyInfo versionUuid="_a-0000e46d-84aa-8000-9baa-011c48011c48_125799"/>
+    </history>
+</contentHaul>

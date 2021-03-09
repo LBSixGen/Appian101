@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_9452</versionUuid>
+    <rule>
+        <name>MW_AM_FurnitureSummary</name>
+        <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19665</uuid>
+        <description>Interface that holds furniture summary</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>a!localVariables(
+  local!created: if(
+    ri!step = "add",
+    now(),
+    ri!FurnitureCDT.addedOn
+  ),
+
+  #"SYSTEM_SYSRULES_sectionLayout_v1"(
+    label: "Furniture Summary",
+    contents: {
+      #"SYSTEM_SYSRULES_columnsLayout"(
+        columns: {
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_imageField_v1"(
+                label: "Image",
+                labelPosition: "ABOVE",
+                images: {
+                  #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19140"(ri!FurnitureCDT.image)
+                  )
+                },
+                size: "MEDIUM",
+                isThumbnail: false,
+                style: "STANDARD"
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Brand",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.brand,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Type",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.type,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Color",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.color,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Material",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.material,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Cost",
+                labelPosition: "ABOVE",
+                value: "$" &amp; ri!FurnitureCDT.cost,
+                saveInto: ri!FurnitureCDT.cost,
+                refreshAfter: "UNFOCUS",
+                readOnly: true,
+                validations: {}
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Added By",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.addedBy,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_dateTimeField"(
+                label: "Added On",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.addedOn,
+                saveInto: {},
+                readonly: true,
+                validations: {}
+              ),
+              #"SYSTEM_SYSRULES_dateField"(
+                label: "Created On",
+                labelPosition: if(
+                  ri!readOnly,
+                  "ADJACENT",
+                  "ABOVE"
+                ),
+                value: local!created,
+                saveInto: {
+                  ri!FurnitureCDT.createdon
+
+                },
+                readOnly: ri!readOnly,
+                disabled: true
+              ),
+              #"SYSTEM_SYSRULES_paragraphField"(
+                label: "Description",
+                labelPosition: "ABOVE",
+                value: ri!FurnitureCDT.description,
+                saveInto: {},
+                refreshAfter: "UNFOCUS",
+                readonly: true,
+                height: "MEDIUM",
+                validations: {}
+              )
+            }
+          )
+        }
+      )
+    }
+  )
+  )
+</definition>
+        <namedTypedValue>
+            <name>FurnitureCDT</name>
+            <type>
+                <name>MW_AM_Furniture</name>
+                <namespace>urn:com:appian:types:AM</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>readOnly</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>step</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_25243"/>
+        <historyInfo versionUuid="_a-0000e46d-84aa-8000-9baa-011c48011c48_125669"/>
+        <historyInfo versionUuid="_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_9452"/>
+    </history>
+</contentHaul>

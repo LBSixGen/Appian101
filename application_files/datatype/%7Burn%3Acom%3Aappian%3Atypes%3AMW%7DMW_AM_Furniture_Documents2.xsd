@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:appian:types:MW"
+  xmlns:a="http://www.appian.com/ae/types/2009"
+  xmlns:tns="urn:com:appian:types:MW" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://www.appian.com/ae/types/2009" schemaLocation="%7Bhttp%3A%2F%2Fwww.appian.com%2Fae%2Ftypes%2F2009%7DCollaborationDocument.xsd"/>
+  <xsd:complexType name="MW_AM_Furniture_Documents2">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[Data type for furniture documents ]]></xsd:documentation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0001e4b3-0685-8000-6d81-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0001e4b3-0685-8000-6d81-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="furnitureDocumentId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0"
+        name="furnitureDocument" nillable="true" type="a:CollaborationDocument"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

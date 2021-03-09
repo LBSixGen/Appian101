@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e556-5577-8000-6cbb-01ef9001ef90_74544</versionUuid>
+    <rule>
+        <name>MW_AM_FurnitureDocs</name>
+        <uuid>_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_10209</uuid>
+        <description>Interface that holds documents for the furniture application</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_headerContentLayout"(
+  header: {
+    #"SYSTEM_SYSRULES_cardLayout"(
+      contents: {
+        #"SYSTEM_SYSRULES_sectionLayout_v1"(
+          label: "",
+          contents: {},
+          showwhen: true,
+          divider: "NONE",
+          marginbelow: "NONE"
+        )
+      },
+      style: "#efefef",
+      height: "AUTO",
+      marginBelow: "NONE",
+      showBorder: false
+    )
+  },
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_richTextDisplayField"(
+              label: "Furniture Documents ",
+              labelPosition: "COLLAPSED",
+              value: {
+                #"SYSTEM_SYSRULES_richTextItem_v1"(
+                  text: {
+                    "Furniture Documents "
+                  },
+                  size: "LARGE",
+                  style: {
+                    "STRONG"
+                  }
+                )
+              }
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              label: "Dropdown",
+              labelPosition: "COLLAPSED",
+              instructions: "Please select a document from the above drop down menu.",
+              placeholder: "--- Select a Document ---",
+              choiceLabels: #"_a-0000e4b6-d587-8000-6cb1-01ef9001ef90_11079",
+              choiceValues: #"_a-0000e4b6-d587-8000-6cb1-01ef9001ef90_11079",
+              value: ri!furnituredoc.furnitureDocument,
+              saveInto: ri!furnituredoc.furnitureDocument,
+              searchDisplay: "AUTO",
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {}
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_richTextDisplayField"(
+      label: "Download/Upload Documents",
+      labelPosition: "COLLAPSED",
+      value: {
+        #"SYSTEM_SYSRULES_richTextItem_v1"(
+          text: {
+            "Download/Upload Documents"
+          },
+          size: "MEDIUM",
+          style: {
+            "STRONG"
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_linkField"(
+      label: "Link to I9 Furniture Form",
+      labelPosition: "ABOVE",
+      links: {
+        #"SYSTEM_SYSRULES_documentDownloadLink"(
+          label: "I9 Furniture Form",
+          document: #"_a-0000e4af-0f90-8000-6cb0-01ef9001ef90_10233"
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {},
+          width: "EXTRA_NARROW"
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {}
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_fileUploadField_v1"(
+      label: "Upload Forms Here:",
+      labelPosition: "ABOVE",
+      validations: {},
+      buttonstyle: "STANDARD",
+      buttonsize: "STANDARD"
+    ),
+    #"SYSTEM_SYSRULES_ButtonArrayLayout"(
+      buttons: {
+        #"SYSTEM_SYSRULES_ButtonWidget"(
+          label: "Submit",
+          icon: "check",
+          submit: true,
+          size: "LARGE",
+          style: "PRIMARY"
+        )
+      },
+      align: "START"
+    )
+  }
+)</definition>
+        <namedTypedValue>
+            <name>furnituredoc</name>
+            <type>
+                <name>MW_AM_Furniture_Documents2</name>
+                <namespace>urn:com:appian:types:MW</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e4b6-d587-8000-6cb1-01ef9001ef90_11099"/>
+        <historyInfo versionUuid="_a-0000e556-5577-8000-6cbb-01ef9001ef90_74544"/>
+    </history>
+</contentHaul>

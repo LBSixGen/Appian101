@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e46d-84aa-8000-9baa-011c48011c48_125175</versionUuid>
+    <rule>
+        <name>MW_AM_FurnitureBarChart</name>
+        <uuid>_a-0000e46d-84aa-8000-9baa-011c48011c48_125164</uuid>
+        <description>An interface that shows reports of furniture in the form of a bar chart</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>a!localVariables(
+  local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+    startIndex: 1,
+    batchSize: - 1,
+    sort: {}
+  ),
+  local!datasubset: #"SYSTEM_SYSRULES_queryEntity_v1"(
+    entity: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_32675",
+    query: #"SYSTEM_SYSRULES_query"(
+      selection: #"SYSTEM_SYSRULES_querySelection"(
+        columns: {
+          #"SYSTEM_SYSRULES_queryColumn"(
+            field: "type"
+          ),
+          #"SYSTEM_SYSRULES_queryColumn"(
+            field: "furnitureId"
+          )
+        }
+      ),
+      pagingInfo: local!pagingInfo
+    ),
+    fetchTotalCount: false
+  ),
+  {
+    #"SYSTEM_SYSRULES_columnChartField"(
+      categories: {
+        index(
+          local!datasubset.data,
+          "type",
+          null
+        )
+      },
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(
+          label: "Furniture Id",
+          data: index(
+            local!datasubset.data,
+            "furnitureId",
+            null
+          )
+        )
+        
+      }
+    )
+  }
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e46d-84aa-8000-9baa-011c48011c48_125175"/>
+    </history>
+</contentHaul>

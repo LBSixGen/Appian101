@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e50c-b614-8000-6cb4-01ef9001ef90_33958</versionUuid>
+    <rule>
+        <name>MW_AM_SupervisorApprovalForm</name>
+        <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19620</uuid>
+        <description>Form for supervisors to reject or approve transfer of furniture </description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Supervisor Form",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_imageField_v1"(
+              label: "Image",
+              labelPosition: "ABOVE",
+              images: {
+                #"SYSTEM_SYSRULES_documentImage"(
+                  document: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19140"(ri!transferCDT.furnitureCDT.image)
+                )
+              },
+              size: "MEDIUM",
+              isThumbnail: false,
+              style: "STANDARD"
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Furniture ID",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.furnitureId,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Color",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.color,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Material",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.material,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              required: false,
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Type",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.type,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Brand",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.brand,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Current Owner",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.currentOwner,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "New Owner",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.newOwner,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Added By",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.addedBy,
+              saveInto: {},
+              refreshAfter: "UNFOCUS",
+              readonly: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dateTimeField"(
+              label: "Added On",
+              labelPosition: "ABOVE",
+              value: ri!transferCDT.furnitureCDT.addedOn,
+              saveInto: ri!transferCDT.furnitureCDT.addedOn,
+              readonly: true,
+              validations: {}
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_boxLayout"(
+      label: "Supervisor Comments",
+      contents: {
+        #"SYSTEM_SYSRULES_paragraphField"(
+          label: "Paragraph",
+          labelPosition: "COLLAPSED",
+          helpTooltip: "Please enter comments here",
+          placeholder: "Please enter comments here",
+          value: ri!transferCDT.furnitureCDT.ownerComments,
+          saveInto: ri!transferCDT.furnitureCDT.ownerComments,
+          refreshAfter: "UNFOCUS",
+          height: "MEDIUM",
+          validations: {}
+        )
+      },
+      style: "ACCENT",
+      marginBelow: "STANDARD"
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Approve",
+        icon: "check",
+        value: true,
+        saveinto: ri!transferCDT.approved,
+        submit: true,
+        size: "LARGE",
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Reject",
+        icon: "times",
+        value: false,
+        saveinto: ri!transferCDT.approved,
+        submit: true,
+        size: "LARGE",
+        style: "DESTRUCTIVE"
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>transferCDT</name>
+            <type>
+                <name>MW_AM_Transfer</name>
+                <namespace>urn:com:appian:types:AM</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_31317"/>
+        <historyInfo versionUuid="_a-0000e50c-b614-8000-6cb4-01ef9001ef90_33958"/>
+    </history>
+</contentHaul>

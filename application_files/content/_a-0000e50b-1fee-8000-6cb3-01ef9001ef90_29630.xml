@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_29641</versionUuid>
+    <constant>
+        <name>MW_AM_FURNITURE_COLOR</name>
+        <uuid>_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_29630</uuid>
+        <description>Constant for furniture color</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16209</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>Black</el>
+                <el>Blue</el>
+                <el>Brown</el>
+                <el>Gray</el>
+                <el>Green</el>
+                <el>Orange</el>
+                <el>Pink</el>
+                <el>Purple</el>
+                <el>White</el>
+                <el>Yellow</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_29641"/>
+    </history>
+</contentHaul>

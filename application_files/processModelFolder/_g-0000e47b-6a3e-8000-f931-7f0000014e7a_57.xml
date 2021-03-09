@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e4b6-d587-8000-6d83-014d98014d98_22</versionUuid>
+    <processModelFolder>
+        <name>MW AM Process Models</name>
+        <uuid>_g-0000e47b-6a3e-8000-f931-7f0000014e7a_57</uuid>
+        <description>Folder that contains process models</description>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_174</groupUuid>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_170</groupUuid>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_172</groupUuid>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_177</groupUuid>
+                <groupUuid>_e-0000e4b6-d587-8000-6cb1-011e94011e94_179</groupUuid>
+            </groups>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e47b-6a3e-8000-f931-7f0000014e7a_59"/>
+        <historyInfo versionUuid="_g-0000e4b6-d587-8000-6d83-014d98014d98_22"/>
+    </history>
+</processModelFolderHaul>

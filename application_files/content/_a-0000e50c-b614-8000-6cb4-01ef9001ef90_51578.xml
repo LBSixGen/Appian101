@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e50c-b614-8000-6cb4-01ef9001ef90_51597</versionUuid>
+    <rule>
+        <name>MW_AddNewFurniture</name>
+        <uuid>_a-0000e50c-b614-8000-6cb4-01ef9001ef90_51578</uuid>
+        <description></description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Form",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Brand",
+              labelPosition: "ABOVE",
+              value: ri!furniture.brand,
+              saveInto: ri!furniture.brand,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Material",
+              labelPosition: "ABOVE",
+              value: ri!furniture.material,
+              saveInto: ri!furniture.material,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Color",
+              labelPosition: "ABOVE",
+              value: ri!furniture.color,
+              saveInto: ri!furniture.color,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "First Name",
+              labelPosition: "ABOVE",
+              value: ri!owner.firstname,
+              saveInto: ri!owner.firstname,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Last Name",
+              labelPosition: "ABOVE",
+              value: ri!owner.lastname,
+              saveInto: ri!owner.lastname,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Email",
+              labelPosition: "ABOVE",
+              value: ri!owner.email,
+              saveInto: ri!owner.email,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Text",
+              labelPosition: "ABOVE",
+              value: ri!owner.phone,
+              saveInto: ri!owner.phone,
+              refreshAfter: "UNFOCUS",
+              validations: {}
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>furniture</name>
+            <type>
+                <name>MW_AM_Furniture</name>
+                <namespace>urn:com:appian:types:AM</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>owner</name>
+            <type>
+                <name>MW_AM_FurnitureOwner</name>
+                <namespace>urn:com:appian:types:MW</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e50c-b614-8000-6cb4-01ef9001ef90_51597"/>
+    </history>
+</contentHaul>

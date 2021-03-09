@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e556-5577-8000-6cbb-01ef9001ef90_74528</versionUuid>
+    <rule>
+        <name>MW_AM_AddNewFurnitureForm</name>
+        <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19542</uuid>
+        <description>Interface that adds new furniture</description>
+        <parentUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Add New Furniture",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Brand",
+              labelPosition: "ABOVE",
+              instructions: "",
+              helptooltip: "",
+              placeholder: "Please type furniture brand ",
+              value: ri!FurnitureCDT.brand,
+              saveInto: ri!FurnitureCDT.brand,
+              refreshAfter: "UNFOCUS",
+              required: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              label: "Furniture Type",
+              labelPosition: "ABOVE",
+              placeholder: "--- Select a Type ---",
+              choiceLabels: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16378",
+              choiceValues: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_16378",
+              value: ri!FurnitureCDT.type,
+              saveInto: ri!FurnitureCDT.type,
+              required: true,
+              searchDisplay: "AUTO",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              label: "Furniture Color",
+              labelPosition: "ABOVE",
+              placeholder: "--- Select a Color ---",
+              choiceLabels: #"_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_29630",
+              choiceValues: #"_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_29630",
+              value: ri!FurnitureCDT.color,
+              saveInto: ri!FurnitureCDT.color,
+              searchDisplay: "AUTO",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Furniture Material",
+              labelPosition: "ABOVE",
+              value: ri!FurnitureCDT.material,
+              saveInto: ri!FurnitureCDT.material,
+              refreshAfter: "UNFOCUS",
+              required: true,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Furniture Cost",
+              labelPosition: "ABOVE",
+              value: ri!FurnitureCDT.cost,
+              saveInto: ri!FurnitureCDT.cost,
+              refreshAfter: "UNFOCUS",
+              required: true,
+              validations: {}
+            )
+          },
+          width: "MEDIUM"
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_fileUploadField_v1"(
+              label: "Furniture Image",
+              labelPosition: "ABOVE",
+              instructions: "Please upload image here",
+              target: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_45622",
+              value: ri!FurnitureCDT.image,
+              saveInto: ri!FurnitureCDT.image,
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_paragraphField"(
+              label: "Furniture Description ",
+              labelPosition: "ABOVE",
+              instructions: len(ri!FurnitureCDT.description) &amp; "/1000",
+              value: ri!FurnitureCDT.description,
+              saveInto: ri!FurnitureCDT.description,
+              refreshAfter: "UNFOCUS",
+              height: "MEDIUM",
+              validations: #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19071"(
+                string: ri!FurnitureCDT.description,
+                maxLength: 1000
+              )
+            )
+          },
+          width: ""
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        icon: "check",
+        submit: true,
+        size: "LARGE",
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>FurnitureCDT</name>
+            <type>
+                <name>MW_AM_Furniture</name>
+                <namespace>urn:com:appian:types:AM</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_20528"/>
+        <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_45641"/>
+        <historyInfo versionUuid="_a-0000e50b-1fee-8000-6cb3-01ef9001ef90_30421"/>
+        <historyInfo versionUuid="_a-0000e556-5577-8000-6cbb-01ef9001ef90_74528"/>
+    </history>
+</contentHaul>
