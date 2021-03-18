@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_36947</versionUuid>
+    <versionUuid>_a-0000e5ff-3507-8000-6ccd-01ef9001ef90_105058</versionUuid>
     <rule>
         <name>MW_AM_ImageNotFoundExpression</name>
         <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19140</uuid>
@@ -18,7 +18,7 @@
         <definition>if(
   isnull(ri!image),
   #"_a-0000e47b-6a3e-8000-9ba4-011c48011c48_19108",
-  ri!image
+  ri!image /*Adding for testing purposes*/
 )</definition>
         <namedTypedValue>
             <name>image</name>
@@ -58,5 +58,6 @@
     </roleMap>
     <history>
         <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_36947"/>
+        <historyInfo versionUuid="_a-0000e5ff-3507-8000-6ccd-01ef9001ef90_105058"/>
     </history>
 </contentHaul>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <versionUuid>51266510-ab35-40ad-9622-26ed1e717ba0</versionUuid>
+  <versionUuid>582a2845-b549-4813-934a-97bfc501e8f9</versionUuid>
   <site a:uuid="4c487c01-9048-45c6-bdc6-6db1508ff5f7" name="MW AM Furniture Site">
     <description>Site for furniture</description>
     <urlStub>mw-am-furniture-site</urlStub>
@@ -63,11 +63,11 @@
     <faviconExpr/>
     <showName>false</showName>
     <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
-    <showRecordNews>true</showRecordNews>
+    <showRecordNews>false</showRecordNews>
     <tasksInSitesVisibility>HIDDEN</tasksInSitesVisibility>
     <buttonShape>SQUARED</buttonShape>
-    <loadingBarColor xsi:nil="true"/>
-    <loadingBarColorExpr xsi:nil="true"/>
+    <loadingBarColor/>
+    <loadingBarColorExpr/>
     <isSystem>false</isSystem>
   </site>
   <roleMap>
@@ -93,5 +93,6 @@
   <history>
     <historyInfo versionUuid="d924aac0-e4eb-4d66-af14-4cd05cfbd790"/>
     <historyInfo versionUuid="51266510-ab35-40ad-9622-26ed1e717ba0"/>
+    <historyInfo versionUuid="582a2845-b549-4813-934a-97bfc501e8f9"/>
   </history>
 </siteHaul>

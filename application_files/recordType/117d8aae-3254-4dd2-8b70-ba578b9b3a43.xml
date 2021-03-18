@@ -97,8 +97,8 @@
       <a:visibilityExpr>=true()</a:visibilityExpr>
       <a:urlStub>summary</a:urlStub>
       <a:headerExpr/>
-      <a:relatedActionCfg>e98390ed-fd63-40e8-8e57-04944d340bca</a:relatedActionCfg>
-      <a:relatedActionCfg>2887e0d8-0d93-439a-bcf4-e7834b582206</a:relatedActionCfg>
+      <a:relatedActionCfg>a62f614d-a1bb-4e11-bcbf-f13d57428af3</a:relatedActionCfg>
+      <a:relatedActionCfg>ef1e0818-7027-4368-a51c-4ef8b262cb80</a:relatedActionCfg>
       <a:recordActionLaunchType>DIALOG</a:recordActionLaunchType>
     </a:detailViewCfg>
     <a:relatedActionCfg a:uuid="a2c9dc27-997f-445c-8ccf-c47b440f2cd9">
@@ -108,7 +108,7 @@
 }</a:contextExpr>
       <a:visibilityExpr>=true()</a:visibilityExpr>
       <a:iconId>f044</a:iconId>
-      <a:refId>e98390ed-fd63-40e8-8e57-04944d340bca</a:refId>
+      <a:refId>a62f614d-a1bb-4e11-bcbf-f13d57428af3</a:refId>
       <a:staticTitleString>Update Furniture Information</a:staticTitleString>
       <a:staticDescriptionString>Update furniture info</a:staticDescriptionString>
       <a:referenceKey>updateFurnitureInformation</a:referenceKey>
@@ -122,7 +122,7 @@ TransferCDT: {
 }</a:contextExpr>
       <a:visibilityExpr>=true()</a:visibilityExpr>
       <a:iconId>f0e7</a:iconId>
-      <a:refId>2887e0d8-0d93-439a-bcf4-e7834b582206</a:refId>
+      <a:refId>ef1e0818-7027-4368-a51c-4ef8b262cb80</a:refId>
       <a:staticTitleString>Add New Owner</a:staticTitleString>
       <a:staticDescriptionString>new furniture owner</a:staticDescriptionString>
       <a:referenceKey>addNewOwner</a:referenceKey>
