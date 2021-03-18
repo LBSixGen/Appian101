@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_35709</versionUuid>
+    <versionUuid>_a-0000e5ff-3507-8000-6ccd-01ef9001ef90_105034</versionUuid>
     <rule>
         <name>MW_AM_GetFurnitureById</name>
         <uuid>_a-0000e47b-6a3e-8000-9ba4-011c48011c48_32656</uuid>
@@ -32,7 +32,7 @@
     pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
       startIndex: 1,
       batchSize: 50
-    )
+    )  /*just adding a comment here for testing purposes*/
   ),
   fetchTotalCount: false
 ).data</definition>
@@ -74,5 +74,6 @@
     </roleMap>
     <history>
         <historyInfo versionUuid="_a-0000e47b-6a3e-8000-9ba4-011c48011c48_35709"/>
+        <historyInfo versionUuid="_a-0000e5ff-3507-8000-6ccd-01ef9001ef90_105034"/>
     </history>
 </contentHaul>
